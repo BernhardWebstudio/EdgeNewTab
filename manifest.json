@@ -1,0 +1,43 @@
+{
+  "author": "Tim Bernhard",
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "20": "icons/icon_20.png",
+      "40": "icons/icon_40.png"
+    },
+    "default_title": "Extension: New Tab",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "js": [ "js/content_script.js" ],
+      "run_at": "document_start"
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "default_locale": "en",
+  "description": "This is an extension for Microsoft Edge enabling the possibility to set a custom site as the location of a new tab.",
+  "icons": {
+    "128": "icons/icon_128.png",
+    "16": "icons/icon_16.png",
+    "48": "icons/icon_48.png"
+  },
+  "minimum_edge_version": "33.14281.1000.0",
+  "name": "New Tab Extension",
+  "options_page": "options.html",
+  "permissions": [
+    "*://*/*",
+    "tabs",
+    "activeTab",
+    "background",
+    "webNavigation",
+    "storage"
+  ],
+  "version": "1.0.0.1",
+  "web_accessible_resources": [ "icons/icon_48.png" ]
+}
