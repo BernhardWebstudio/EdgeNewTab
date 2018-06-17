@@ -28,7 +28,7 @@
     "48": "icons/icon_48.png"
   },
   "minimum_edge_version": "33.14281.1000.0",
-  "name": "New Tab Extension",
+  "name": "NewTab",
   "options_page": "options.html",
   "permissions": [
     "*://*/*",
